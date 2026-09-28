@@ -1,8 +1,9 @@
 import joblib
+import os
 import pandas as pd
 import streamlit as st
 
-MODEL_PATH = "best_model.joblib"
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "best_model.joblib")
 
 model = joblib.load(MODEL_PATH)
 
